@@ -36,13 +36,9 @@ public class MainActivity extends AppCompatActivity {
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Connect button clicked
 
                 connect.setText("Connect Button");
-                serialPort.openPort("/dev/ttyUSB0", 9600);
-//                connect.setText("Disconnect");
-//                // Serial port is already connected, disconnect it
-//                serialPort.closePort();
+                System.out.println(serialPort.openPort("/dev/bus/usb/001/006", 9600));
             }
         });
 
